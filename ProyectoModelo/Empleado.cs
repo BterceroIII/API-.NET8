@@ -14,5 +14,6 @@ namespace ProyectoModelo
         public decimal Sueldo { get; set; }
         public string? FechaContrato { get; set; }
 
+        
     }
 }
