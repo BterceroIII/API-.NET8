@@ -53,7 +53,7 @@ namespace ProyectoData
 
             using (var conexion = new SqlConnection(conexiones.CadenaSQL))
             {
-                await conexion.OpenAsync();
+       
                 SqlCommand cmd = new SqlCommand("SP_CrearEmpleados", conexion);
                 cmd.Parameters.AddWithValue("@NombreCompleto",objeto.NombreCompleto);
                 cmd.Parameters.AddWithValue("@IdDepartamento", objeto.Departamento!.IdDepartamento);
@@ -82,7 +82,7 @@ namespace ProyectoData
 
             using (var conexion = new SqlConnection(conexiones.CadenaSQL))
             {
-                await conexion.OpenAsync();
+               
                 SqlCommand cmd = new SqlCommand("SP_EditarEmpleados", conexion);
                 cmd.Parameters.AddWithValue("@IdEmpleado", objeto.IdEmpleado);
                 cmd.Parameters.AddWithValue("@NombreCompleto", objeto.NombreCompleto);
@@ -112,7 +112,7 @@ namespace ProyectoData
 
             using (var conexion = new SqlConnection(conexiones.CadenaSQL))
             {
-                await conexion.OpenAsync();
+                
                 SqlCommand cmd = new SqlCommand("SP_EliminarEmpleados", conexion);
                 cmd.Parameters.AddWithValue("@IdEmpleado", id);
                 cmd.CommandType = CommandType.StoredProcedure;
